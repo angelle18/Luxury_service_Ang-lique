@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ClientController!{% endblock %}
+
+{% block body %}
+{# Formulaire d'ajout client #}
+        <section class="section-padding gray-bg log-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3 card card-panel">
+                        <h3 class="text-extrabold">Create new Client</h3>
+                        {{form_start(form)}}
+                        <form id="register-form" role="form" method="post" accept-char="UTF-8" autocomplete="off" data-parsley-validate>
+
+                            <input type="hidden" name="_token" value="">
+
+                             <div class="input-field">
+                                         {{form_row(form.name)}}
+                            </div>
+                            <div class="input-field">
+                                         {{form_row(form.type)}}
+                            </div>
+                            <div class="input-field">
+                                          {{form_row(form.notes)}}
+                            </div>
+
+
+                             </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+{% endblock %}
